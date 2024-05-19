@@ -5,7 +5,9 @@ Este projeto é uma API para reconhecimento facial que permite identificar rosto
 ## Tecnologias Usadas
 
 - JavaScript
-- Python
-- CSS
+- HTML
 
 ## Equipe
+Mariana
+Matheus
+Victor
