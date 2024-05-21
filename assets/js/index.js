@@ -10,9 +10,7 @@ function startVideo() {
 
 Promise.all([
   faceapi.nets.tinyFaceDetector.loadFromUri('./assets/lib/models'),
-  faceapi.nets.faceLandmark68Net.loadFromUri('./assets/lib/models'),
   faceapi.nets.faceRecognitionNet.loadFromUri('./assets/lib/models'),
-  faceapi.nets.faceExpressionNet.loadFromUri('./assets/lib/models')
 ]).then(startVideo)
 
 
@@ -22,12 +20,10 @@ video.addEventListener('play', () => {
   const displaySize = { width: video.width, height: video.height }
   faceapi.matchDimensions(canvas, displaySize)
   setInterval(async () => {
-    const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions()).withFaceLandmarks().withFaceExpressions()
+    const detections = await faceapi.detectAllFaces(video, new faceapi.TinyFaceDetectorOptions())
     const resizedDetections = faceapi.resizeResults(detections, displaySize)
     canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height)
     faceapi.draw.drawDetections(canvas, resizedDetections)
-    faceapi.draw.drawFaceLandmarks(canvas, resizedDetections)
-    faceapi.draw.drawFaceExpressions(canvas, resizedDetections)
 
     if (detections[0].expressions) {
       var myHeaders = new Headers();
