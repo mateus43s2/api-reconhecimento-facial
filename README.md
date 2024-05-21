@@ -9,5 +9,5 @@ Este projeto é uma API para reconhecimento facial que permite identificar rosto
 
 ## Equipe
 - Mariana
-- Matheus
+- Mateus
 - Victor
