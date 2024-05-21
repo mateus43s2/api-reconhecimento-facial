@@ -1,39 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Video | Reconhecimento Facial com FaceAPI</title>
-
-</head>
-<body>
-    <video
-        autoplay
-        id="cam"
-        width="720"
-        height="560"
-        muted
-    ></video>
-
-    <style>
-      body {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Reconhecimento Facial | API</title>
+  <script defer src="./assets/lib/face-api.min.js"></script>
+  <script defer src="./assets/js/index.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #2b202d;
+    }
 
     canvas {
     position: absolute;
-  }
-    </style>
-    
-    <script src="./assets/lib/face-api.min.js"></script>
-    <script src="./assets/js/index.js"></script>
-
+    }
+  </style>
+</head>
+<body>
+  <video id="video" width="600" height="560" autoplay muted></video>
 </body>
 </html>
