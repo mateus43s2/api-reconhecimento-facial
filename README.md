@@ -13,5 +13,5 @@ https://mariteixeiraa.github.io/api-reconhecimento-facial/
 
 ## Equipe
 - Mariana
-- Matheus
+- Mateus
 - Victor
