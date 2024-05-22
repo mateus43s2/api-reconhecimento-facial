@@ -27,36 +27,5 @@ video.addEventListener('play', () => {
     canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height)
     faceapi.draw.drawDetections(canvas, resizedDetections)
 
-
-<<<<<<< HEAD
   }, 100)
 })
-=======
-      var raw = JSON.stringify({
-        "local_name": "test",
-        "created_at": "2021-07-09T20:48:09.859650Z",
-        "angry": detections[0].expressions.angry,
-        "disgusted": detections[0].expressions.disgusted,
-        "fearful": detections[0].expressions.fearful,
-        "happy": detections[0].expressions.happy,
-        "neutral": detections[0].expressions.neutral,
-        "sad": detections[0].expressions.sad,
-        "surprised": detections[0].expressions.surprised
-      });
-
-      var requestOptions = {
-        method: 'POST',
-        headers: myHeaders,
-        body: raw,
-        redirect: 'follow'
-      };
-
-      fetch("http://127.0.0.1:8000/facial/", requestOptions)
-        .then(response => response.text())
-        .then(result => console.log(result))
-        .catch(error => console.log('error', error));
-    }
-
-  }, 1000)
-})
->>>>>>> 7d8affcdea6485a8f275902c68f7566fe6fb94d0
