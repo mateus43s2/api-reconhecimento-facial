@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceScan</title>
+    <link rel="icon" href="https://w7.pngwing.com/pngs/127/842/png-transparent-camera-graphy-computer-icons-camera-cdr-text-photography.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f7;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            background-color: #f5f5f7;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            max-width: 500px;
+            width: 80%;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .navbar img {
+            height: 40px;
+            width: auto;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+            color: #333;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 2em;
+            color: #666;
+        }
+        button {
+            background-color: #007aff;
+            color: white;
+            padding: 0.75em 1.5em;
+            font-size: 1em;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #005bb5;
+        }
+        .face-animation {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 2em;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Face_ID_logo.svg/800px-Face_ID_logo.svg.png'); /* Substitua com a sua imagem */
+            background-size: contain;
+            border-radius: 50%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            animation: scan 3s infinite;
+            overflow: hidden;
+        }
+        @keyframes scan {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <p style= 'margin: auto; padding: 0px;'>Segurança redobrada para as suas câmeras.</p>
+        </div>
+        <div class="face-animation"></div>
+        <h1>FaceScan</h1>
+        <p>Experimente o futuro do reconhecimento facial.</p>
+        <form action="/run-scan" method="post">
+            <button type="submit">Teste agora</button>
+        </form>
+    </div>
+</body>
+</html>
